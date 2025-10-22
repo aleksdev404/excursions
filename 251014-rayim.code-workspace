@@ -3,15 +3,15 @@
 		{
 			"path": "."
 		},
-		// {
-		// 	"path": "./src"
-		// },
-		// {
-		// 	"path": "./src/apps"
-		// },
-		// {
-		// 	"path": "./src/apps/core"
-		// },
+		{
+			"path": "./src"
+		},
+		{
+			"path": "./src/apps"
+		},
+		{
+			"path": "./src/apps/main"
+		},
 		{
 			"path": "./.theme"
 		}
