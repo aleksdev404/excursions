@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		// {
+		// 	"path": "./src"
+		// },
+		// {
+		// 	"path": "./src/apps"
+		// },
+		// {
+		// 	"path": "./src/apps/core"
+		// },
+		{
+			"path": "./.theme"
+		}
+	],
+	"settings": {}
+}
