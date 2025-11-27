@@ -6,6 +6,7 @@
     <title>Страница</title>
 </head>
 <body>
-    Hello world
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
