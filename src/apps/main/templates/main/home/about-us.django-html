@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="video-area tp-video-area pd-top-110" style="background-image: url({% static '' %}/img/bg/7.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 align-self-center wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="section-title mb-lg-0 mb-4 text-center text-lg-left">
+                    <h2 class="title">What Do You Know <br> About US</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when unknown printer took a galley of type and scrambled it to make a type specimen book. It has not only five centuries</p>
+                    <a class="btn btn-yellow" href="#"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6 offset-xl-1 wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="video-popup-wrap">
+                    <div class="thumb">
+                        <img src="{% static '' %}/img/video.png" alt="video">
+                    </div>
+                    <div class="video-popup-btn">
+                        <a href="https://www.youtube.com/watch?v=c7XEhXZ_rsk" class="video-play-btn mfp-iframe"><i class="fa fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

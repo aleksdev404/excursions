@@ -1,7 +1,0 @@
-{% extends 'base.django-html' %}
-
-{% block content %}
-
-Home
-
-{% endblock %}

@@ -1,0 +1,12 @@
+{% load static %}
+<div class="ads-area pd-top-90">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9">
+                <a class="ads-thumb" href="#">
+                    <img src="{% static '' %}/img/others/1.png" alt="ads">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

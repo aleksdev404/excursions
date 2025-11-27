@@ -1,0 +1,126 @@
+{% load static %}
+<nav class="navbar navbar-area navbar-expand-lg nav-style-01">
+    <div class="container nav-container">
+        <div class="responsive-mobile-menu">
+            <div class="mobile-logo">
+                <a href="#">
+                    <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
+                </a>
+            </div>
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#tp_main_menu" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggle-icon">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </button>
+            <div class="nav-right-content">
+                <ul class="pl-0">
+                    <li class="top-bar-btn-booking">
+                        <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
+                    </li>
+                    <li class="tp-lang">
+                        <div class="tp-lang-wrap">
+                            <select class="select single-select">
+                                <option value="1">ENG</option>
+                                <option value="2">BAN</option>
+                                <option value="3">Chinese</option>
+                                <option value="3">Spanish</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="search">
+                        <i class="ti-search"></i>
+                    </li>
+                    <li class="notification">
+                        <a class="signUp-btn" href="#">
+                            <i class="fa fa-user-o"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="tp_main_menu">
+            <div class="logo-wrapper desktop-logo">
+                <a href="#" class="main-logo">
+                    <img src="{% static '' %}/img/logo.png" alt="logo">
+                </a>
+                <a href="#" class="sticky-logo">
+                    <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="navbar-nav">
+                <li class="menu-item-has-children">
+                    <a href="#">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Home 01</a></li>
+                        <li><a href="#">Home 02</a></li>
+                        <li><a href="#">Home 03</a></li>
+                        <li><a href="#">Home 04</a></li>
+                        <li><a href="#">Home 05</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Tours List</a></li>
+                        <li><a href="#">Tours List 02</a></li>
+                        <li><a href="#">Tours List 03</a></li>
+                        <li><a href="#">Tours Details</a></li>
+                        <li><a href="#">Destination List</a></li>
+                        <li><a href="#">Destination List 2</a></li>
+                        <li><a href="#">Destination Details</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Gallery Details</a></li>
+                        <li><a href="#">Comming soon</a></li>
+                        <li><a href="#">404</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">User Profile</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">Blog</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Blog 02</a></li>
+                        <li><a href="#">Blog 03</a></li>
+                        <li><a href="#">Blog Details</a></li>
+                        <li><a href="#">Blog Details 02</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right-content">
+            <ul>
+                <li>
+                    <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
+                </li>
+                <li class="tp-lang">
+                    <div class="tp-lang-wrap">
+                        <select class="select single-select">
+                            <option value="1">ENG</option>
+                            <option value="2">BAN</option>
+                            <option value="3">Chinese</option>
+                            <option value="3">Spanish</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="search">
+                    <i class="ti-search"></i>
+                </li>
+                <li class="notification">
+                    <a class="signUp-btn" href="#">
+                        <i class="fa fa-user-o"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

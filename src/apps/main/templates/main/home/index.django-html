@@ -1,0 +1,21 @@
+{% extends 'base.django-html' %}
+
+{% block content %}
+
+{% include './banner.django-html' %}
+
+{% include './categories.django-html' %}
+
+{% include './about-us.django-html' %}
+
+{% include './excursions.django-html' %}
+
+{% include './advantages.django-html' %}
+
+{% include 'components/testimonials.django-html' %}
+
+{% include 'components/faq.django-html' %}
+
+{% include 'components/cta.django-html' %}
+
+{% endblock %}

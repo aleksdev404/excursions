@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="main-banner-area jarallax" style="background-image: url({% static '' %}/img/banner/2.jpg);">
+    <div class="content">
+        <div class="container">
+            <h2>Explore, Discover, Travel</h2>
+            <h1>ADVENTURE</h1>
+            <h1 class="shadow">ADVENTURE</h1>
+            <div class="scroll-down">
+                <a href="#main_search" class="text-center">
+                    <span></span>
+                    <i class="la la-long-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

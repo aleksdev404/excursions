@@ -1,0 +1,18 @@
+{% load static %}
+
+<script src="{% static '' %}/js/jquery-2.2.4.min.js"></script>
+<script src="{% static '' %}/js/popper.min.js"></script>
+<script src="{% static '' %}/js/bootstrap.min.js"></script>
+<script src="{% static '' %}/js/jquery.magnific-popup.js"></script>
+<script src="{% static '' %}/js/owl.carousel.min.js"></script>
+<script src="{% static '' %}/js/wow.min.js"></script>
+<script src="{% static '' %}/js/slick.js"></script>
+<script src="{% static '' %}/js/waypoints.min.js"></script>
+<script src="{% static '' %}/js/jquery.counterup.min.js"></script>
+<script src="{% static '' %}/js/imagesloaded.pkgd.min.js"></script>
+<script src="{% static '' %}/js/isotope.pkgd.min.js"></script>
+<script src="{% static '' %}/js/swiper.min.js"></script>
+<script src="{% static '' %}/js/jquery.nice-select.min.js"></script>
+<script src="{% static '' %}/js/jquery-ui.min.js"></script>
+
+<script src="{% static '' %}/js/main.js"></script>
