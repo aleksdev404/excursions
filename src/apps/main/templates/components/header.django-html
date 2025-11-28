@@ -3,7 +3,7 @@
     <div class="container nav-container">
         <div class="responsive-mobile-menu">
             <div class="mobile-logo">
-                <a href="#">
+                <a href="{% url 'main:home' %}">
                     <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
                 </a>
             </div>
@@ -18,64 +18,36 @@
             <div class="nav-right-content">
                 <ul class="pl-0">
                     <li class="top-bar-btn-booking">
-                        <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
-                    </li>
-                    <li class="tp-lang">
-                        <div class="tp-lang-wrap">
-                            <select class="select single-select">
-                                <option value="1">ENG</option>
-                                <option value="2">BAN</option>
-                                <option value="3">Chinese</option>
-                                <option value="3">Spanish</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="search">
-                        <i class="ti-search"></i>
-                    </li>
-                    <li class="notification">
-                        <a class="signUp-btn" href="#">
-                            <i class="fa fa-user-o"></i>
-                        </a>
+                        <a class="btn btn-yellow" href="https://wa.me/905523705900?text=aaaa">ЗАПИСАТЬСЯ <i class="fa fa-paper-plane"></i></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="tp_main_menu">
             <div class="logo-wrapper desktop-logo">
-                <a href="#" class="main-logo">
+                <a href="{% url 'main:home' %}" class="main-logo">
                     <img src="{% static '' %}/img/logo.png" alt="logo">
                 </a>
-                <a href="#" class="sticky-logo">
+                <a href="{% url 'main:home' %}" class="sticky-logo">
                     <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
                 </a>
             </div>
             <ul class="navbar-nav">
                 <li>
-                    <a href="#">Главная</a>
+                    <a href="{% url 'main:home' %}">Главная</a>
                 </li>
                 <li>
-                    <a href="#">О нас</a>
+                    <a href="{% url 'main:about-us' %}">О нас</a>
                 </li>
                 <li>
-                    <a href="#">Связаться</a>
+                    <a href="{% url 'main:contact-us' %}">Связаться</a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#">Экскурсии</a>
+                    <a href="{% url 'main:excursion-list' %}">Экскурсии</a>
                     <ul class="sub-menu">
-                        <li><a href="#">Tours List</a></li>
-                        <li><a href="#">Tours List 02</a></li>
-                        <li><a href="#">Tours List 03</a></li>
-                        <li><a href="#">Tours Details</a></li>
-                        <li><a href="#">Destination List</a></li>
-                        <li><a href="#">Destination List 2</a></li>
-                        <li><a href="#">Destination Details</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Gallery Details</a></li>
-                        <li><a href="#">Comming soon</a></li>
-                        <li><a href="#">404</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">User Profile</a></li>
+                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 1</a></li>
+                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 2</a></li>
+                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 3</a></li>
                     </ul>
                 </li>
             </ul>
@@ -83,7 +55,7 @@
         <div class="nav-right-content">
             <ul>
                 <li>
-                    <a class="btn btn-yellow" href="#">ЗАПИСАТЬСЯ <i class="fa fa-paper-plane"></i></a>
+                    <a class="btn btn-yellow" href="https://wa.me/905523705900?text=aaaa">ЗАПИСАТЬСЯ <i class="fa fa-paper-plane"></i></a>
                 </li>
             </ul>
         </div>

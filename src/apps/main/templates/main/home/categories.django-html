@@ -15,7 +15,7 @@
                                     <!-- <a class="tag" href="#">Europe</a>
                                     <p class="date">19 September 2019</p> -->
                                     <h4 class="title">Стамбульский городской тур</h4>
-                                    <a class="btn btn-yellow" href="#"><span>Забронировать<i class="la la-arrow-right"></i></span></a>
+                                    <a class="btn btn-yellow" href="{% url 'main:excursion-list' %}"><span>Забронировать<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                     <!-- <a class="tag" href="#">Europe</a>
                                     <p class="date">18 September 2019</p> -->
                                     <h4 class="title">Исторические места и музеи </h4>
-                                    <a class="btn btn-yellow" href="#"><span>Посмотреть<i class="la la-arrow-right"></i></span></a>
+                                    <a class="btn btn-yellow" href="{% url 'main:excursion-list' %}"><span>Посмотреть<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <!-- <a class="tag" href="#">Europe</a>
                                     <p class="date">18 September 2019</p> -->
                                     <h4 class="title">Трансфер из аэропорта</h4>
-                                    <a class="btn btn-yellow" href="#"><span>Заказать<i class="la la-arrow-right"></i></span></a>
+                                    <a class="btn btn-yellow" href="https://wa.me/905523705900?text=aaaa"><span>Заказать<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                     <!-- <a class="tag" href="#">Europe</a>
                                     <p class="date">19 September 2019</p> -->
                                     <h4 class="title">Частные шопинг-туры</h4>
-                                    <a class="btn btn-yellow" href="#"><span>Посетить<i class="la la-arrow-right"></i></span></a>
+                                    <a class="btn btn-yellow" href="https://wa.me/905523705900?text=aaaa"><span>Посетить<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>

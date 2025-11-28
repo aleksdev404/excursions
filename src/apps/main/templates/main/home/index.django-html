@@ -6,7 +6,7 @@
 
 {% include './categories.django-html' %}
 
-{% include 'components/video.django-html' %}
+{% include 'components/video.django-html' with is_button_more_visible=True %}
 
 {% include './excursions.django-html' %}
 

@@ -8,7 +8,7 @@
       <div class="col-lg-6 col-md-6">
         <div class="footer-widget widget">
           <div class="about_us_widget">
-            <a href="#" class="footer-logo">
+            <a href="{% url 'main:home' %}" class="footer-logo">
               <img src="{% static '' %}/img/logo.png" alt="footer logo" />
             </a>
             <p>
@@ -59,10 +59,10 @@
         <div class="footer-widget widget">
           <h4 class="widget-title">Быстрые ссылки</h4>
           <ul class="widget_nav_menu">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Связаться</a></li>
-            <li><a href="#">Экскурсии</a></li>
+            <li><a href="{% url 'main:home' %}">Главная</a></li>
+            <li><a href="{% url 'main:about-us' %}">О нас</a></li>
+            <li><a href="{% url 'main:contact-us' %}">Связаться</a></li>
+            <li><a href="{% url 'main:excursion-list' %}">Экскурсии</a></li>
           </ul>
         </div>
       </div>
