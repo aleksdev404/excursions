@@ -1,4 +1,5 @@
 {% load static %}
+{% load utils %}
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01">
     <div class="container nav-container">
         <div class="responsive-mobile-menu">
@@ -42,13 +43,8 @@
                 <li>
                     <a href="{% url 'main:contact-us' %}">Связаться</a>
                 </li>
-                <li class="menu-item-has-children">
+                <li>
                     <a href="{% url 'main:excursion-list' %}">Экскурсии</a>
-                    <ul class="sub-menu">
-                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 1</a></li>
-                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 2</a></li>
-                        <li><a href="{% url 'main:excursion-list' %}">Экскурсия 3</a></li>
-                    </ul>
                 </li>
             </ul>
         </div>
