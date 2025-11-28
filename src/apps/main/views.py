@@ -13,8 +13,10 @@ class ContactUsView(TemplateView):
     template_name = 'main/contact-us.django-html'
 
 
-class ExcursionListView(TemplateView):
+class ExcursionListView(generic.ListView):
+    model = models.Excursion
     template_name = 'main/excursion-list.django-html'
+    ordering = ("created_at",)
 
 
 class ExcursionDetailView(TemplateView):

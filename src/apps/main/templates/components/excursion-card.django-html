@@ -1,0 +1,15 @@
+<div class="single-destinations-list text-center">
+    <div class="thumb">
+        {% if obj.cover %}
+            <img src="{{ obj.cover.url }}" alt="list">
+        {% endif %}
+        <div class="d-list-btn-wrap">
+            <div class="d-list-btn">
+                <a class="btn btn-yellow" href="{{ obj.get_absolute_url }}">Записаться <i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <p class="content">{{ obj.title }}</p>
+    </div>
+</div>
