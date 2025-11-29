@@ -7,8 +7,12 @@
                 <div class="breadcrumb-inner">
                     <h1 class="page-title">{{ title }}</h1>
                     <ul class="page-list">
-                        <li><a href="#">Главная</a></li>
-                        <li>About Us</li>
+                        <li>
+                            <a href="{% url 'main:home' %}">
+                                ↩ Главная
+                            </a>
+                        </li>
+                        <!-- <li>{{ title }}</li> -->
                     </ul>
                 </div>
             </div>

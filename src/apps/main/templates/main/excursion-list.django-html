@@ -11,35 +11,11 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 order-lg-12">
                 <div class="row">
-                    {% for _ in "....."|make_list %}
+                    {% for excursion in object_list %}
                         <div class="col-lg-3 col-sm-6">
-                            <div class="single-destinations-list style-two">
-                                <div class="thumb">
-                                    <img src="{% static '' %}/img/destination-list/4.png" alt="list">
-                                </div>
-                                <div class="details">
-                                    <p class="location"><img src="{% static '' %}/img/icons/1.png" alt="map">Maldives</p>
-                                    <h4 class="title"><a href="#">Hurawalhi Island</a></h4>
-                                    <p class="content">7 Days Tour on 2 person</p>
-                                    <div class="tp-price-meta">
-                                        <h2>620 <small>$</small></h2>
-                                    </div>
-                                </div>
-                            </div>
+                            {% include 'components/excursion-card.django-html' with obj=excursion %}
                         </div>
                     {% endfor %}
-                    <div class="col-lg-12 text-center">
-                        <div class="tp-pagination text-center d-inline-block mt-4">
-                            <ul>
-                                <li><a class="prev page-numbers" href="#"><i class="la la-long-arrow-left"></i></a></li>
-                                <li><span class="page-numbers">1</span></li>
-                                <li><span class="page-numbers current">2</span></li>
-                                <li><a class="page-numbers" href="#">3</a></li>
-                                <li><a class="page-numbers" href="#">4</a></li>
-                                <li><a class="next page-numbers" href="#"><i class="la la-long-arrow-right"></i></a></li>
-                            </ul>                          
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

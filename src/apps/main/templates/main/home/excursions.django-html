@@ -1,4 +1,5 @@
 {% load static %}
+{% load utils %}
 
 <div class="offer-area pd-top-70">
     <div class="container">
@@ -16,113 +17,12 @@
             <div class="row">
                 <div class="col-xl-9 col-lg-10 offset-xl-1 order-lg-12">
                     <div class="destinations-list-slider">
-                        <div class="d-list-slider-item">
-                            <div class="single-destinations-list text-center">
-                                <div class="thumb">
-                                    <span class="d-list-tag">Special Offer</span>
-                                    <img src="{% static '' %}/img/destination-list/1.png" alt="list">
-                                    <div class="d-list-btn-wrap">
-                                        <div class="d-list-btn">
-                                            <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <h4 class="title">Greece</h4>
-                                    <p class="content">Atmosphere of the sunny country</p>
-                                    <ul class="tp-list-meta border-bt-dot">
-                                        <li><i class="fa fa-calendar-o"></i> 8oct</li>
-                                        <li><i class="fa fa-clock-o"></i> 4 days</li>
-                                        <li><i class="fa fa-star"></i> 4.3</li>
-                                    </ul>
-                                    <div class="tp-price-meta tp-price-meta-cl">
-                                        <p>Price</p>
-                                        <h2>620 <small>$</small></h2>
-                                        <del>620<span>$</span></del>
-                                    </div>
-                                </div>
+                        {% get_excursion_list as excursion_list %}
+                        {% for excursion in excursion_list %}
+                            <div class="d-list-slider-item">
+                                {% include 'components/excursion-card.django-html' with obj=excursion %}
                             </div>
-                        </div>
-                        <div class="d-list-slider-item">
-                            <div class="single-destinations-list text-center">
-                                <div class="thumb">
-                                    <img src="{% static '' %}/img/destination-list/2.png" alt="list">
-                                    <div class="d-list-btn-wrap">
-                                        <div class="d-list-btn">
-                                            <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <h4 class="title">Italy</h4>
-                                    <p class="content">Atmosphere of the sunny country</p>
-                                    <ul class="tp-list-meta border-bt-dot">
-                                        <li><i class="fa fa-calendar-o"></i> 8oct</li>
-                                        <li><i class="fa fa-clock-o"></i> 4 days</li>
-                                        <li><i class="fa fa-star"></i> 4.3</li>
-                                    </ul>
-                                    <div class="tp-price-meta tp-price-meta-cl">
-                                        <p>Price</p>
-                                        <h2>620 <small>$</small></h2>
-                                        <del>620<span>$</span></del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-list-slider-item">
-                            <div class="single-destinations-list text-center">
-                                <div class="thumb">
-                                    <span class="d-list-tag">Special Offer</span>
-                                    <img src="{% static '' %}/img/destination-list/3.png" alt="list">
-                                    <div class="d-list-btn-wrap">
-                                        <div class="d-list-btn">
-                                            <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <h4 class="title">Canada</h4>
-                                    <p class="content">Atmosphere of the sunny country</p>
-                                    <ul class="tp-list-meta border-bt-dot">
-                                        <li><i class="fa fa-calendar-o"></i> 8oct</li>
-                                        <li><i class="fa fa-clock-o"></i> 4 days</li>
-                                        <li><i class="fa fa-star"></i> 4.3</li>
-                                    </ul>
-                                    <div class="tp-price-meta tp-price-meta-cl">
-                                        <p>Price</p>
-                                        <h2>620 <small>$</small></h2>
-                                        <del>620<span>$</span></del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-list-slider-item">
-                            <div class="single-destinations-list text-center">
-                                <div class="thumb">
-                                    <span class="d-list-tag">Special Offer</span>
-                                    <img src="{% static '' %}/img/destination-list/1.png" alt="list">
-                                    <div class="d-list-btn-wrap">
-                                        <div class="d-list-btn">
-                                            <a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <h4 class="title">Greece</h4>
-                                    <p class="content">Atmosphere of the sunny country</p>
-                                    <ul class="tp-list-meta border-bt-dot">
-                                        <li><i class="fa fa-calendar-o"></i> 8oct</li>
-                                        <li><i class="fa fa-clock-o"></i> 4 days</li>
-                                        <li><i class="fa fa-star"></i> 4.3</li>
-                                    </ul>
-                                    <div class="tp-price-meta tp-price-meta-cl">
-                                        <p>Price</p>
-                                        <h2>620 <small>$</small></h2>
-                                        <del>620<span>$</span></del>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-lg-2 align-self-center order-lg-11">

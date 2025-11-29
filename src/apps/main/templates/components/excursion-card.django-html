@@ -10,6 +10,10 @@
         </div>
     </div>
     <div class="details">
-        <p class="content">{{ obj.title }}</p>
+        <p class="content">
+            <a href="{{ obj.get_absolute_url }}">
+                {{ obj.title }}
+            </a>
+        </p>
     </div>
 </div>
