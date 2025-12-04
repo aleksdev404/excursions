@@ -5,7 +5,7 @@
         <div class="responsive-mobile-menu">
             <div class="mobile-logo">
                 <a href="{% url 'main:home' %}">
-                    <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
+                    <img src="{% static '' %}/img/logo-new-sticky.svg" alt="logo">
                 </a>
             </div>
             <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#tp_main_menu" 
@@ -27,10 +27,10 @@
         <div class="collapse navbar-collapse" id="tp_main_menu">
             <div class="logo-wrapper desktop-logo">
                 <a href="{% url 'main:home' %}" class="main-logo">
-                    <img src="{% static '' %}/img/logo.png" alt="logo">
+                    <img src="{% static '' %}/img/logo-new.svg" style="height: 3rem;" alt="logo">
                 </a>
                 <a href="{% url 'main:home' %}" class="sticky-logo">
-                    <img src="{% static '' %}/img/sticky-logo.png" alt="logo">
+                    <img src="{% static '' %}/img/logo-new-sticky.svg" style="height: 3rem;" alt="logo">
                 </a>
             </div>
             <ul class="navbar-nav">
