@@ -1,5 +1,11 @@
+from django.core.files.base import ContentFile
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.urls import reverse
+
+from io import BytesIO
+from pathlib import Path
+from PIL import Image
 
 
 def upload_to(instance, filename):
@@ -23,6 +29,49 @@ def upload_to(instance, filename):
     return f"{app_label}/{model_name}/{field_name}/{filename}"
 
 
+class ImageCompressionMixin:
+    image_field_name = "cover"   # имя поля по умолчанию
+    max_width = 1280
+    max_height = 1280
+    quality = 70
+
+    def compress_image(self):
+        field = getattr(self, self.image_field_name)
+
+        if not field:
+            return
+
+        img = Image.open(field)
+
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+
+        img.thumbnail((self.max_width, self.max_height))
+
+        img_io = BytesIO()
+        img.save(img_io, format="JPEG", quality=self.quality, optimize=True)
+        img_io.seek(0)
+
+        original_name = Path(field.name).stem
+        new_name = f"{original_name}.jpg"
+
+        compressed_file = InMemoryUploadedFile(
+            img_io,
+            field_name="ImageField",
+            name=new_name,
+            content_type="image/jpeg",
+            size=img_io.getbuffer().nbytes,
+            charset=None
+        )
+
+        setattr(self, self.image_field_name, compressed_file)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        self.compress_image()
+        super().save(update_fields=[self.image_field_name])
+
+
 class SiteSettings(models.Model):
     logo = models.ImageField("Логотип", upload_to=upload_to, blank=True, null=True)  # noqa
     slogan = models.CharField("Слоган", max_length=255, blank=True)
@@ -42,16 +91,24 @@ class SiteSettings(models.Model):
         return "Настройки сайта"
 
 
-class Excursion(models.Model):
+class Excursion(
+    ImageCompressionMixin,
+    models.Model
+):
     title = models.CharField("Название", max_length=200)
     slug = models.SlugField(unique=True, null=False)
-    cover = models.ImageField("Изображение (обложка)", upload_to=upload_to, blank=True, null=True)  # noqa
     short_description = models.TextField("Короткое описание", blank=True)
     content_md = models.TextField("Контент (Markdown, без изображений)", blank=True)  # noqa
 
     is_published = models.BooleanField("Опубликовано", default=True)
     created_at = models.DateTimeField("Создано", auto_now_add=True)  # noqa
     updated_at = models.DateTimeField("Обновлено", auto_now=True)  # noqa
+
+    cover = models.ImageField("Изображение (обложка)", upload_to=upload_to, blank=True, null=True)  # noqa
+    image_field_name = "cover"
+    max_width = 1280
+    max_height = 1280
+    quality = 75
 
     class Meta:
         verbose_name = "Экскурсия"
@@ -65,16 +122,24 @@ class Excursion(models.Model):
         return reverse('main:excursion-detail', kwargs={'slug': self.slug})
 
 
-class ExcursionImage(models.Model):
+class ExcursionImage(
+    ImageCompressionMixin,
+    models.Model
+):
     excursion = models.ForeignKey(
         Excursion,
         on_delete=models.CASCADE,
         related_name="images",
         verbose_name="Экскурсия",
     )
-    image = models.ImageField("Изображение", upload_to=upload_to)
     caption = models.CharField("Подпись", max_length=200, blank=True)
     sort_order = models.PositiveIntegerField("Порядок", default=0)
+
+    image = models.ImageField("Изображение", upload_to=upload_to)
+    image_field_name = "image"
+    max_width = 1280
+    max_height = 1280
+    quality = 75
 
     class Meta:
         verbose_name = "Изображение экскурсии"

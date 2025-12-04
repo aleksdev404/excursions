@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'markdownify',
+
     'apps.main'
 ]
 
@@ -87,3 +89,13 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MARKDOWNIFY = {
+    "default": {
+        "BLEACH": False,
+        "extensions": [
+            "markdown.extensions.extra",
+            "markdown.extensions.toc",
+        ]
+    }
+}

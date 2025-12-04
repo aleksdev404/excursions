@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="gallery-area pd-top-108">
+    <div class="container">
+        <h4 class="single-page-small-title text-center mb-5">Как выглядит экскурсия?</h4>
+        <div class="gallery-area">
+            <div class="container">
+                <div class="gallery-filter-area row">
+                    <div class="gallery-sizer col-1"></div>
+                    {% for img in object.images.all %}
+                        <div class="tp-gallery-item col-md-4 col-12">
+                            <div class="tp-gallery-item-img">
+                                <a class="popup-thumb" href="{{ img.image.url }}" data-effect="mfp-zoom-in">
+                                    <img src="{{ img.image.url }}" alt="image">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Gallery area end -->
+    </div>
+</div>  

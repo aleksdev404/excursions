@@ -1,4 +1,4 @@
-<div class="single-destinations-list text-center">
+<div class="single-destinations-list text-center excursions__card">
     <div class="thumb">
         {% if obj.cover %}
             <img src="{{ obj.cover.url }}" alt="list">

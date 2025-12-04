@@ -8,8 +8,8 @@
                     <h1 class="page-title">{{ title }}</h1>
                     <ul class="page-list">
                         <li>
-                            <a href="{% url 'main:home' %}">
-                                ↩ Главная
+                            <a href="{% if back_url %}{{back_url}}{% else %}{% url 'main:home' %}{% endif %}">
+                                ↩ {% if back_title %}{{back_title}}{% else %}Главная{% endif %}
                             </a>
                         </li>
                         <!-- <li>{{ title }}</li> -->

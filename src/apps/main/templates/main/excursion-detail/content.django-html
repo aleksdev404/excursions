@@ -1,0 +1,20 @@
+{% load static %}
+{% load markdownify %}
+
+<div class="container mt-5">
+    <div class="row align-items-stretch" style="row-gap: 3rem;">
+        <div class="col-lg-9">
+            <div class="tour-details-wrap">
+                {{ object.content_md|markdownify }}
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="position-sticky" style="top: 100px">
+                <a class="btn btn-yellow w-100 mb-2" href="#">🛒 Записаться</a>
+                <a class="btn btn-primary w-100 mb-2" href="#">🤔 Задать вопросы</a>
+                <a class="btn btn-success w-100 mb-2" href="#">💬 Написать отзыв</a>
+                <a class="btn btn-danger w-100 mb-2" href="#">📢 Пожаловаться</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,9 +23,9 @@ class ExcursionListView(generic.ListView):
 
 class ExcursionDetailView(generic.DetailView):
     model = models.Excursion
-    template_name = 'main/excursion-detail.django-html'
-    slug_field = 'slug'      # по какому полю искать
-    slug_url_kwarg = 'slug'  # имя параметра в urls
+    template_name = 'main/excursion-detail/index.django-html'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
 
     def get_queryset(self):
         return models.Excursion.objects.filter(is_published=True)

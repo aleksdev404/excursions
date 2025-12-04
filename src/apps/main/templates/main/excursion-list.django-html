@@ -4,23 +4,30 @@
 
 {% block content %}
 
-{% include 'components/breadcrumb.django-html' with title='Экскурсии' %}
+{% include 'components/breadcrumb.django-html' with title='Экскурсии по Стамбулу' %}
 
-<div class="tour-list-area pd-top-120">
+<div class="tour-list-area pd-top-50">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12 col-lg-12 order-lg-12">
-                <div class="row">
-                    {% for excursion in object_list %}
-                        <div class="col-lg-3 col-sm-6">
-                            {% include 'components/excursion-card.django-html' with obj=excursion %}
-                        </div>
-                    {% endfor %}
-                </div>
+            <div class="row excursions">
+                {% for excursion in object_list %}
+                    <div class="col-lg-3 col-sm-6 mb-5">
+                        {% include 'components/excursion-card.django-html' with obj=excursion %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
+
+<style>
+.excursions__card
+{
+    height: 100%;
+    margin:0;
+    background: #ffffff;
+}
+</style>
 
 {% include 'components/cta.django-html' %}
 
