@@ -1,5 +1,7 @@
 {% extends 'base.django-html' %}
 
+{% block title %}Экскурсии по Стамбулу на русском языке{% endblock %}
+
 {% load static %}
 
 {% block content %}

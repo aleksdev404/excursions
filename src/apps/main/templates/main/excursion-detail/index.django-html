@@ -1,5 +1,7 @@
 {% extends 'base.django-html' %}
 
+{% block title %}{{object.title}}{% endblock %}
+
 {% load static %}
 {% load utils %}
 
