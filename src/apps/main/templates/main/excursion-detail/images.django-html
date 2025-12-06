@@ -1,5 +1,6 @@
 {% load static %}
 
+{% if object.images.all %}
 <div class="gallery-area pd-top-108">
     <div class="container">
         <h4 class="single-page-small-title text-center mb-5">Как выглядит экскурсия?</h4>
@@ -22,3 +23,4 @@
         <!-- Gallery area end -->
     </div>
 </div>  
+{% endif %}
