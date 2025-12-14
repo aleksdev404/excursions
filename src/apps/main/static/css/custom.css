@@ -3,3 +3,8 @@
     width: 100% !important;
     aspect-ratio: 2 / 1 !important;
 }
+
+.main-banner-area__brand-shadow
+{
+    display: block !important;
+}
