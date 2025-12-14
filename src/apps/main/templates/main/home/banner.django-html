@@ -40,7 +40,7 @@
     gsap.fromTo(".main-banner-area",
         {backgroundPositionY: "0"},
         {
-            backgroundPositionY: "-200px", 
+            backgroundPositionY: "200px", 
             ease: "none",
             scrollTrigger: {
                 trigger: ".main-banner-area",
@@ -68,6 +68,12 @@
 
 
 <style>
+    .main-banner-area
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .main-banner-area__brand, .main-banner-area__brand-shadow
     {
         background: transparent !important;
