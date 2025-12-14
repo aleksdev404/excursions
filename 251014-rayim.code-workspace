@@ -16,6 +16,9 @@
 			"path": "./src/apps/main"
 		},
 		{
+			"path": "./src/apps/main/templates"
+		},
+		{
 			"path": "./.theme"
 		}
 	],

@@ -1,0 +1,5 @@
+.category__thumb img
+{
+    width: 100% !important;
+    aspect-ratio: 2 / 1 !important;
+}

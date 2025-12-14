@@ -1,0 +1,15 @@
+{% load static %}
+
+<div class="col-sm-6 col-xl-3">
+    <div class="single-blog style-three category">
+        <div class="thumb category__thumb">
+            <img src="{% static '' %}/img/category/category-{{img}}.jpg" alt="blog">
+        </div>
+        <div class="single-blog-details-wrap category__details-wrap">
+            <div class="single-blog-details text-center">
+                <h4 class="title">{{ title }}</h4>
+                <a class="btn btn-yellow" href="{% url 'main:excursion-list' %}"><span>Забронировать<i class="la la-arrow-right"></i></span></a>
+            </div>
+        </div>
+    </div>
+</div>
