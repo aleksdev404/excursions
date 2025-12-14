@@ -44,7 +44,7 @@
     gsap.fromTo(".breadcrumb-area",
         {backgroundPositionY: "0"},
         {
-            backgroundPositionY: "-200px", 
+            backgroundPositionY: "200px", 
             ease: "none",
             scrollTrigger: {
                 trigger: ".breadcrumb-area",
@@ -64,7 +64,7 @@
     }
     .breadcrumb-area
     {
+        background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
     }
 </style>
