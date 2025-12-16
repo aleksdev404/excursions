@@ -4,6 +4,10 @@
 
 {% block title %}{{object.title}}{% endblock %}
 
+{% block head %}
+<meta name="description" content='Присоединяйтесь к экскурсии "{{ object.title }}"!'>
+{% endblock %}
+
 {% load static %}
 {% load utils %}
 

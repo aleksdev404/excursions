@@ -4,21 +4,32 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Aleks Dev">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="ru">
     <title>{% block title %}{% endblock %} | Rayim Tour</title>
+    {% block head %}
+        <meta name="description" content="Здравствуйте, дорогие путешественники! Меня зовут Абдуррахим, я закончил исторический факультет университета Мармара. Хорошо владею русским языком — у меня русская жена, я бывал в Москве, Киеве и Казахстане. С удовольствием покажу вам лучшие места Стамбула и расскажу о них самое интересное! ">
+    {% endblock head %}
+    <meta name="keywords" content="гид историк, экскурсии по Стамбулу, частный гид, исторические экскурсии">
+    <meta property="og:title" content="Историк-гид в Москве — Иван Петров">
+    <meta property="og:description" content="Здравствуйте, дорогие путешественники! Меня зовут Абдуррахим, я закончил исторический факультет университета Мармара. Хорошо владею русским языком — у меня русская жена, я бывал в Москве, Киеве и Казахстане. С удовольствием покажу вам лучшие места Стамбула и расскажу о них самое интересное!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{% url 'main:home' %}">
+    <meta property="og:image" content="{% static '' %}/img/og/general.jpeg">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="{% static '' %}img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{% static '' %}img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="{% static '' %}img/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="{% static '' %}img/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <meta name="apple-mobile-web-app-title" content="RAYİMTOUR" />
     <link rel="manifest" href="{% static '' %}img/favicon/site.webmanifest" />
 
     <!-- Additional plugin css -->
     {% include 'styles.django-html' %}
-
 </head>
 <body>
 
