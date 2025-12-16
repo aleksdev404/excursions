@@ -5,9 +5,9 @@
 {% block title %}{{object.title}}{% endblock %}
 
 {% block head %}
-<meta name="description" content='Присоединяйтесь к экскурсии "{{ object.title }}"!'>
-<meta property="og:title" content='Посетите экскурсию "{{ object.title }} 🚶🏻‍♀️"'>
-<meta property="og:image" content="{{ object.cover.url }}">
+    <meta name="description" content='Присоединяйтесь к экскурсии "{{ object.title }}"!'>
+    <meta property="og:title" content='Посетите экскурсию "{{ object.title }} 🚶🏻‍♀️"'>
+    <meta property="og:image" content="{{ object.cover.url }}">
 {% endblock %}
 
 {% load static %}
